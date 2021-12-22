@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>World Temperature Data</title>
+</head>
+
+<body>
+    <script>
+        // Temperature Data from: https://data.giss.nasa.gov/gistemp/
+        // Mean from: https://earthobservatory.nasa.gov/world-of-change/global-temperatures
+
+        getData();
+
+        // function to fetch CSV file
+        // Uses async/await because it is an asynchronous function
+        async function getData()
+        {
+            const response = await fetch('test.csv');
+            const data = await response.text();
+            //console.log(data)
+
+            // split() - splitting the entire file into indivdiual rows and storing into an array
+            // slice() - makes a copy of a portion of an array - from index 1 to the end
+            //           This essentially removes the first row (with the headings)
+            rows = data.split('\n').slice(1);
+
+            // foreach() - This allows us to apply something to each element fo the array
+            rows.forEach(elt => 
+            {
+                const row = elt.split(',');
+                console.log(row);
+
+                const year = row[0];
+                const temp = row[1];
+
+                console.log(year,temp);
+            })
+
+            //console.log(rows)
+        }
+        
+
+    </script>
+</body>
+
+</html>
