@@ -20,24 +20,36 @@
             const data = await response.text();
             //console.log(data)
 
-            // split() - splitting the entire file into indivdiual rows and storing into an array
-            // slice() - makes a copy of a portion of an array - from index 1 to the end
-            //           This essentially removes the first row (with the headings)
-            rows = data.split('\n').slice(1);
+            // split() -
+            // splitting the entire table into indivdiual rows (seperate by newline) 
+            // and storing into an array
+
+            // slice() - 
+            // makes a copy of a portion of an array - from index 1 to the end
+            // This essentially removes the first row (with the headings)
+
+            table = data.split('\n').slice(1);
 
             // foreach() - This allows us to apply something to each element fo the array
-            rows.forEach(elt => 
+            table.forEach(row => 
             {
-                const row = elt.split(',');
-                console.log(row);
+                // Splits each row into individual elements (columns)
+                const columns = row.split(',');
+                
+                // Prints out row broken into individual elements (columns)
+                console.log(columns);
 
-                const year = row[0];
-                const temp = row[1];
+                // Stores year (first element of each row)
+                const year = columns[0];
 
+                //Stores temperature (second element of each row)
+                const temp = columns[1];
+
+                // Prints out YEAR and TEMPERATURE for each row of the table
                 console.log(year,temp);
             })
 
-            //console.log(rows)
+            
         }
         
 
