@@ -19,8 +19,9 @@
         // Mean from: https://earthobservatory.nasa.gov/world-of-change/global-temperatures
 
         // Created array to store labels on the x axis 
-        const xlabels = [];
-        const ytemps = [];
+        // NO NEED FOR GLOBAL VARIABLES ANYMORE
+        // const xlabels = [];
+        // const ytemps = [];
 
         createChart();
         //getData();
@@ -31,17 +32,18 @@
             // -----------------------------------------------------------------------------------
             
             // The chart will be created ONLY when the data is collected
-            await getData();
+            // the variable data stores the xValues and yValues that are returned by the function
+            const data = await getData();
 
             const ctx = document.getElementById('chart').getContext('2d');
 
             const myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: xlabels,
+                    labels: data.xValues,
                     datasets: [{
                         label: 'Global Average Temperature in C°',
-                        data: ytemps,
+                        data: data.yValues,
                         backgroundColor: ['rgba(255, 99, 132, 0.2)'],
                         borderColor: ['rgba(255, 99, 132, 1)'],
                         borderWidth: 1
@@ -60,6 +62,11 @@
         // function to fetch CSV file
         // Uses async/await because it is an asynchronous function
         async function getData() {
+
+            //Creating local variables to store X and Y values
+            const xValues = [];
+            const yValues = [];
+
             const response = await fetch('ZonAnn.Ts+dSST.csv');
             const data = await response.text();
             //console.log(data)
@@ -85,20 +92,24 @@
                 // Stores year (first element of each row)
                 const year = columns[0];
 
-                // Now that year is stored, we store them into xlabels array
-                xlabels.push(year)
+                // Now that year is stored, we store them into xValues array
+                xValues.push(year)
 
                 // Stores temperature (second element of each row)
                 const temp = columns[1];
 
-                // Now that the temperature is stored, we store them into ytemps array
+                // Now that the temperature is stored, we store them into yValues array
                 // ParseFloat() converts the text from the .csv to a number we can use
                 // We add 14 because that is the Global Average Mean in Celcius
-                ytemps.push( parseFloat(temp) + 14);
+                yValues.push( parseFloat(temp) + 14);
 
                 // Prints out YEAR and TEMPERATURE for each row of the table
                 console.log(year, temp);
-            })
+            });
+
+            // Return the local xValues and yValues
+            // It does this by returning an object with these two values
+            return {xValues, yValues}
 
 
         }
