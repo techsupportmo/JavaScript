@@ -5,9 +5,9 @@
  <br/>
  
  ## Projects
- - [World Temperature](#World-Temperature)
+ - [World Temperature](#World-Temperature-:earth_americas:)
 
  
 
- # World Temperature
+ # World Temperature :earth_americas:
  - it should go to the bottom
