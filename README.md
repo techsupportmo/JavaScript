@@ -17,4 +17,11 @@ But this doesn’t tell the entire story. While iOS may be considered more secur
 Then there are the social engineering attacks in which cybercriminals attempt to trick users into giving up log-in information, access to bank accounts, and other personal data. It doesn't matter what mobile operating system you are using: both iOS and Android can be equally vulnerable to these types of phishing attacks.
 
  # World Temperature :earth_americas:
- - it should go to the bottom
+ - Add Description here
+
+![](images/full-graph.png)
+
+![](images/line.png)
+
+![](images/bar.png)
+
