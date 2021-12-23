@@ -5,7 +5,7 @@
  <br/>
  
  ## Projects
- - [World Temperature](#World-Temperature-:earth_americas:)
+ - [World Temperature](#World-Temperature-earth_americas)
 
  
 
