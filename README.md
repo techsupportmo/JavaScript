@@ -9,5 +9,5 @@
 
  
 
- # World Temperature :earth_americas:
+ # World Temperature
  - it should go to the bottom
