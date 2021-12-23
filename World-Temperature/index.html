@@ -19,12 +19,11 @@
         // Mean from: https://earthobservatory.nasa.gov/world-of-change/global-temperatures
 
 
-        function createChart()
-        {
+        function createChart() {
             //CODE THAT IS COPY PASTED
             // -----------------------------------------------------------------------------------
 
-        
+
             const ctx = document.getElementById('chart').getContext('2d');
 
             // Created array to store labels on the x axis 
@@ -37,32 +36,12 @@
                     datasets: [{
                         label: 'Global Average Temperature',
                         data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
+                        backgroundColor: ['rgba(255, 99, 132, 0.2)'],
+                        borderColor: ['rgba(255, 99, 132, 1)'],
                         borderWidth: 1
                     }]
                 },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
+
             });
 
 
@@ -76,8 +55,7 @@
 
         // function to fetch CSV file
         // Uses async/await because it is an asynchronous function
-        async function getData()
-        {
+        async function getData() {
             const response = await fetch('ZonAnn.Ts+dSST.csv');
             const data = await response.text();
             //console.log(data)
@@ -93,11 +71,10 @@
             table = data.split('\n').slice(1);
 
             // foreach() - This allows us to apply something to each element fo the array
-            table.forEach(row => 
-            {
+            table.forEach(row => {
                 // Splits each row into individual elements (columns)
                 const columns = row.split(',');
-                
+
                 // Prints out row broken into individual elements (columns)
                 //console.log(columns);
 
@@ -111,12 +88,12 @@
                 xlabels.push(year)
 
                 // Prints out YEAR and TEMPERATURE for each row of the table
-                console.log(year,temp);
+                console.log(year, temp);
             })
 
-            
+
         }
-        
+
 
     </script>
 </body>
