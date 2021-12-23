@@ -5,7 +5,7 @@
  <br/>
  
  ## Projects
- - [World Temperature](##-WorldTemperature)
+ - [World Temperature](##WorldTemperature)
 
  In some circles, Apple’s iOS operating system has long been considered the more secure of the two operating systems. Why? Apple’s operating system is a closed system. Apple doesn’t release its source code to app developers, and the owners of iPhones and iPads can't modify the code on their phones themselves. This makes it more difficult for hackers to find vulnerabilities on iOS-powered devices.
 
