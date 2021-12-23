@@ -19,9 +19,9 @@ Then there are the social engineering attacks in which cybercriminals attempt to
  # World Temperature :earth_americas:
  - Add Description here
 
-![](images/full-graph.png)
+![](World-Temperature/images/full-graph.png)
 
-![](images/line.png)
+![](World-Temperature/images/line.png)
 
-![](images/bar.png)
+![](World-Temperature/images/bar.png)
 
