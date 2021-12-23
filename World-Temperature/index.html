@@ -18,16 +18,22 @@
         // Temperature Data from: https://data.giss.nasa.gov/gistemp/
         // Mean from: https://earthobservatory.nasa.gov/world-of-change/global-temperatures
 
+        // Created array to store labels on the x axis 
+        const xlabels = [];
+        const ytemps = [];
 
-        function createChart() {
-            //CODE THAT IS COPY PASTED
+        createChart();
+        //getData();
+
+        async function createChart() {
+
+            //CODE TO CREATE CHART
             // -----------------------------------------------------------------------------------
-
+            
+            // The chart will be created ONLY when the data is collected
+            await getData();
 
             const ctx = document.getElementById('chart').getContext('2d');
-
-            // Created array to store labels on the x axis 
-            const xlabels = [];
 
             const myChart = new Chart(ctx, {
                 type: 'bar',
@@ -35,7 +41,7 @@
                     labels: xlabels,
                     datasets: [{
                         label: 'Global Average Temperature',
-                        data: [12, 19, 3, 5, 2, 3],
+                        data: ytemps,
                         backgroundColor: ['rgba(255, 99, 132, 0.2)'],
                         borderColor: ['rgba(255, 99, 132, 1)'],
                         borderWidth: 1
@@ -50,8 +56,6 @@
         }
 
 
-
-        getData();
 
         // function to fetch CSV file
         // Uses async/await because it is an asynchronous function
@@ -81,11 +85,14 @@
                 // Stores year (first element of each row)
                 const year = columns[0];
 
+                // Now that year is stored, we store them into xlabels array
+                xlabels.push(year)
+
                 // Stores temperature (second element of each row)
                 const temp = columns[1];
 
-                // Now that year and temperature are stored, we store them into xlabels array
-                xlabels.push(year)
+                // Now that the temperature is stored, we store them into ytemps array
+                ytemps.push(temp);
 
                 // Prints out YEAR and TEMPERATURE for each row of the table
                 console.log(year, temp);
