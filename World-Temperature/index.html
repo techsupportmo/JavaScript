@@ -30,7 +30,7 @@
 
             //CODE TO CREATE CHART
             // -----------------------------------------------------------------------------------
-            
+
             // The chart will be created ONLY when the data is collected
             // the variable data stores the xValues and yValues that are returned by the function
             const data = await getData();
@@ -49,6 +49,23 @@
                         borderWidth: 1
                     }]
                 },
+                // We added back the options in order to add the degree symbol --> °
+                // At the end of each of our y labels
+                options: {
+                    scales: {
+                        yAxes: {
+                            ticks: {
+                                // Include a dollar sign in the ticks
+                                callback: function (value, index, values) {
+
+                                    // To type ° - Option + Shift + 8
+                                    // Returns each y label with the degree symbol next to it
+                                    return  value + '°';
+                                }
+                            }
+                        }
+                    }
+                }
 
             });
 
@@ -101,7 +118,7 @@
                 // Now that the temperature is stored, we store them into yValues array
                 // ParseFloat() converts the text from the .csv to a number we can use
                 // We add 14 because that is the Global Average Mean in Celcius
-                yValues.push( parseFloat(temp) + 14);
+                yValues.push(parseFloat(temp) + 14);
 
                 // Prints out YEAR and TEMPERATURE for each row of the table
                 console.log(year, temp);
@@ -109,7 +126,7 @@
 
             // Return the local xValues and yValues
             // It does this by returning an object with these two values
-            return {xValues, yValues}
+            return { xValues, yValues }
 
 
         }
