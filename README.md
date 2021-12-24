@@ -49,3 +49,5 @@ A different way to look at the data would be with a bar graph, which doesn't dis
 
 ![](World-Temperature/images/bar.png)
 
+
+<br/>
