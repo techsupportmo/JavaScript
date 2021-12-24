@@ -19,6 +19,12 @@ But this doesn’t tell the entire story. While iOS may be considered more secur
 
 Then there are the social engineering attacks in which cybercriminals attempt to trick users into giving up log-in information, access to bank accounts, and other personal data. It doesn't matter what mobile operating system you are using: both iOS and Android can be equally vulnerable to these types of phishing attacks.
 
+<br/>
+
+# International Space Station (ISS) Map
+
+<br/>
+
  # World Temperature :earth_americas:
  This program uses Chart.js in order to display an interactive graph with the average world temperatures in Celsius from 1880 to 2020
 
@@ -53,4 +59,3 @@ A different way to look at the data would be with a bar graph, which doesn't dis
 
 <br/>
 
-# International Space Station (ISS) Map
