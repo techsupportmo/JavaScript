@@ -29,10 +29,12 @@ This project involves
     - The dataset was parsed by using JavaScript functions like slice() and split() in order to extract the year and the global annual mean
 - Chart.js
     - This library allowed me to display the dataset using an interactive graph
+    - More info about Chart.js be found <a href="https://www.chartjs.org/">here</a>
 - HTML5 Canvas
 - Modifying chart style
     - Many elements of the chart can be changed, and Chart.js allowed me to specifically customize the graph in terms of the type of graph it is (ie bar graph, line graph, pie graph), background color, border color, and x and y labels.
 
+<br/>
 
 The Global Average Temperature in C° displayed as a line graph
 
