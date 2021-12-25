@@ -8,6 +8,14 @@
 
 <body>
 
+    <!-- Adding some HTML to display the latitude and longitude on the webpage-->
+
+    <h1>Where is the ISS?</h1>
+
+    <!-- Displays latitude and longitude -->
+    <p>Latitude: <span id="lat"></span><br/></p>
+    <p>Longitude: <span id="lon"></span><br/></p>
+
     <!-- JavaScript goes here -->
     <script>
 
@@ -35,6 +43,11 @@
             const {latitude, longitude} = data;
             console.log(latitude);
             console.log(longitude);
+
+            //This code is what gets the latitude and longitude values
+            // from their respective variables
+            document.getElementById('lat').textContent = latitude;
+            document.getElementById('lon').textContent = longitude;
 
         }
 
