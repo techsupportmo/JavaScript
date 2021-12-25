@@ -7,7 +7,32 @@
 </head>
 
 <body>
-    Content goes here.
+
+    <!-- JavaScript goes here -->
+    <script>
+
+
+        // Global variable to store URL of the API
+        const api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
+
+        // Function to get the ISS data
+        async function getISS() {
+
+            // Stores information from the api_url after being retrieved by fetch()
+            const response = await fetch(api_url);
+
+            // This will convert the response from the fetch() function into
+            // JSON format and save it in a variable called data
+            const data = await response.json();
+
+            // Prints data to console
+            console.log(data);
+
+        }
+
+        getISS();
+
+    </script>
 </body>
 
 </html>
