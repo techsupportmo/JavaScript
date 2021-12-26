@@ -23,6 +23,22 @@ Then there are the social engineering attacks in which cybercriminals attempt to
 
 # International Space Station (ISS) Map
 
+Add description here
+
+In order to create this project, I had to fetch data from a particular endpoint of the <a href="https://wheretheiss.at/w/developer">Where Is The ISS At? REST API </a>. This allowed me to access real-time data about the International Space Station, which I converted to JSON format. After that, I destructured the data into two seperate variables, latitude and longitude, and redisplayed it onto the webpage.
+
+<br/>
+
+API Documentation
+![](ISS-Map/images/endpoint.png)
+
+JSON
+![](ISS-Map/images/json.png)
+
+Latitude and Longitude printed on the webpage, as well as the console
+![](ISS-Map/images/lat_and_lon.png)
+
+
 <br/>
 
  # World Temperature :earth_americas:
