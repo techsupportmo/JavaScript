@@ -14,7 +14,19 @@
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
 
+
+    <!-- Creating style tag to add some inline CSS -->
+    <style>
+
+        #issMap { 
+            height: 180px; 
+        }
+
+    </style>
+
     <title>ISS Map</title>
+
+
 
 </head>
 
@@ -28,8 +40,19 @@
     <p>Latitude: <span id="lat"></span><br/></p>
     <p>Longitude: <span id="lon"></span><br/></p>
 
+    
+
+    <!-- Creating DIV for the map -->
+
+    <div id="issMap"></div>
+
     <!-- JavaScript goes here -->
     <script>
+
+
+        // Initializing the map
+        // Currently @ timestamp 4:11 on lesson 1.5
+        // const map = L.map('IssMap').setView([51.505, -0.09], 13);
 
 
         // Global variable to store URL of the API
@@ -64,6 +87,8 @@
         }
 
         getISS();
+
+
 
     </script>
 </body>
