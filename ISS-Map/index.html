@@ -19,7 +19,7 @@
     <style>
 
         #issMap { 
-            height: 180px; 
+            height: 500px; 
         }
 
     </style>
@@ -54,6 +54,25 @@
         // Currently @ timestamp 4:11 on lesson 1.5
         const mymap = L.map('issMap').setView([0, 0], 1);
 
+        // ----------
+
+        //TILE
+        // Giving credit to Open Street Map
+        const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+
+        // This isn't an actual URL
+        // This is the format for the URL of any given tile
+        const tileURL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+
+        const tiles = L.tileLayer( tileURL , {attribution}  )
+
+        tiles.addTo(mymap)
+
+        // ----------
+
+        // Global variable to store URL of the API
+        const api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
+
         // ICON
         // Initializng the icon for the Internation Space Station (ISS) marker
         var issIcon = L.icon({
@@ -66,26 +85,14 @@
 
 
         // MARKER
-        // Initializing the marker
+        // Initializing the marker with a custom icon
         // We don't have the latitiude and longitude yet, so we put the marker at (0,0)
          const marker = L.marker(  [0,0] , {icon: issIcon} ).addTo(mymap);
 
 
 
 
-        // Giving credit to Open Street Map
-        const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
-        // This isn't an actual URL
-        // This is the format for the URL of any given tile
-        const tileURL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-
-        const tiles = L.tileLayer( tileURL , {attribution}  )
-
-        tiles.addTo(mymap)
-
-        // Global variable to store URL of the API
-        const api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
 
         // Function to get the ISS data
         async function getISS() {
