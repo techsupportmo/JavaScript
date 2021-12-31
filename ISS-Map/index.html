@@ -49,10 +49,17 @@
     <!-- JavaScript goes here -->
     <script>
 
-
+        // MAP
         // Initializing the map
         // Currently @ timestamp 4:11 on lesson 1.5
         const mymap = L.map('issMap').setView([0, 0], 1);
+
+        // MARKER
+        // Initializing the marker
+        // We don't have the latitiude and longitude yet, so we put the marker at (0,0)
+         const marker = L.marker([0,0]).addTo(mymap);
+
+
 
 
         // Giving credit to Open Street Map
@@ -91,8 +98,10 @@
             console.log(longitude);
 
             // MARKER
-            // Adding marker to the map
-            L.marker([latitude, longitude]).addTo(mymap);
+            // Set the location of the marker to be the latitude/longitude
+            // Reference to the documentation: https://leafletjs.com/reference.html#marker
+            marker.setLatLng( [latitude, longitude] )
+
 
             //This code is what gets the latitude and longitude values
             // from their respective variables
