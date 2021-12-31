@@ -90,6 +90,10 @@
             console.log(latitude);
             console.log(longitude);
 
+            // MARKER
+            // Adding marker to the map
+            L.marker([latitude, longitude]).addTo(mymap);
+
             //This code is what gets the latitude and longitude values
             // from their respective variables
             document.getElementById('lat').textContent = latitude;
