@@ -54,10 +54,21 @@
         // Currently @ timestamp 4:11 on lesson 1.5
         const mymap = L.map('issMap').setView([0, 0], 1);
 
+        // ICON
+        // Initializng the icon for the Internation Space Station (ISS) marker
+        var issIcon = L.icon({
+            iconUrl: 'images/iss.png',
+            iconSize: [50, 32],         // size of icon
+            iconAnchor: [25, 16],       // this is the center of the icon
+
+
+        });
+
+
         // MARKER
         // Initializing the marker
         // We don't have the latitiude and longitude yet, so we put the marker at (0,0)
-         const marker = L.marker([0,0]).addTo(mymap);
+         const marker = L.marker(  [0,0] , {icon: issIcon} ).addTo(mymap);
 
 
 
