@@ -122,7 +122,9 @@
 
             // MAP
             // Setting the view of the map, so that the ISS is in the center
-            mymap.setView( [latitude, longitude], 2.5 )
+            // used the setView() function to set the initial view of the map to be the 
+            // latitude/longitude of ISS with a little zoom (second parameter)
+            //mymap.setView( [latitude, longitude], 2.5 )
 
 
             //This code is what gets the latitude and longitude values
@@ -133,6 +135,10 @@
         }
 
         getISS();
+
+        // Calling the setInterval() function to refresh the page every 1 second
+        // This will cause the ISS marker to move
+        setInterval(getISS, 1000)
 
 
 
