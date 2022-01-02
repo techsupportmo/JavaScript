@@ -120,6 +120,10 @@
             // Reference to the documentation: https://leafletjs.com/reference.html#marker
             marker.setLatLng( [latitude, longitude] )
 
+            // MAP
+            // Setting the view of the map, so that the ISS is in the center
+            mymap.setView( [latitude, longitude], 2.5 )
+
 
             //This code is what gets the latitude and longitude values
             // from their respective variables
