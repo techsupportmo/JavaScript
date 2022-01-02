@@ -22,6 +22,12 @@
             height: 500px; 
         }
 
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+ 
+
     </style>
 
     <title>ISS Map</title>
@@ -90,7 +96,10 @@
          const marker = L.marker(  [0,0] , {icon: issIcon} ).addTo(mymap);
 
 
-
+        // This variable will check if the map is being initialized for the first time
+        // We are using it to set the initial view to be the latitude/longitude
+        // and it woun't constantly revert back to the intial zoom level every second
+        let firstTime = true;
 
 
 
@@ -120,17 +129,25 @@
             // Reference to the documentation: https://leafletjs.com/reference.html#marker
             marker.setLatLng( [latitude, longitude] )
 
+
+
             // MAP
             // Setting the view of the map, so that the ISS is in the center
             // used the setView() function to set the initial view of the map to be the 
             // latitude/longitude of ISS with a little zoom (second parameter)
-            //mymap.setView( [latitude, longitude], 2.5 )
+            if (firstTime)
+            {
+                mymap.setView( [latitude, longitude], 2.5 );
+                firstTime = false;
+            }
+            
 
 
             //This code is what gets the latitude and longitude values
             // from their respective variables
-            document.getElementById('lat').textContent = latitude;
-            document.getElementById('lon').textContent = longitude;
+            // toFixed() function lets us set the number of decimal places
+            document.getElementById('lat').textContent = latitude.toFixed(6);
+            document.getElementById('lon').textContent = longitude.toFixed(6);
 
         }
 
