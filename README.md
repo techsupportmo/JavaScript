@@ -16,7 +16,9 @@
 
 Add description here
 
-In order to create this project, I had to fetch data from a particular endpoint of the <a href="https://wheretheiss.at/w/developer">Where Is The ISS At? REST API</a>. 
+In order to create this project, I had to fetch data from a particular endpoint of the <a href="https://wheretheiss.at/w/developer">Where Is The ISS At?</a>  REST API. 
+
+Add GIF here
 
 This allowed me to access real-time data about the International Space Station, which I converted to JSON format. After that, I destructured the data into two seperate variables, latitude and longitude, and redisplayed it onto the webpage.
 
