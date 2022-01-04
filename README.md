@@ -41,9 +41,8 @@ After retrieving the latitude and longitude, I used Leaflet.js to create an inte
 <br/>
 
  # World Temperature :earth_americas:
- This program uses <a href="https://www.chartjs.org/">Chart.js</a> in order to display an interactive graph with the average world temperatures in Celsius from 1880 to 2020
+ This program uses <a href="https://www.chartjs.org/">Chart.js</a> in order to display an interactive graph with the Global Average Temperature in Celsius from 1880 to 2020
 
- The Global Average Temperature in C° displayed as a line graph
 
 ![](World-Temperature/images/full-graph.png)
 
