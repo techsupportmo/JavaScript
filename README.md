@@ -14,7 +14,9 @@
 
 # International Space Station (ISS) Map
 
-Add description here
+This application uses Leaflet.js to display the location of the International Space Station on a map
+
+![](ISS-Map/images/iss.gif)
 
 In order to create this project, I had to fetch data from a particular endpoint of the <a href="https://wheretheiss.at/w/developer">Where Is The ISS At?</a>  REST API. 
 
