@@ -35,13 +35,17 @@ Latitude and Longitude printed on the webpage, as well as the console
 ![](ISS-Map/images/lat_and_lon.png)
 
 After retrieving the latitude and longitude, I used Leaflet.js to create an interactive that would display the ISS as a marker, and I used the setInterval() to make sure that the location would be updated every second
-![](ISS-Map/images/iss_map)
+![](ISS-Map/images/iss_map.png)
 
 
 <br/>
 
  # World Temperature :earth_americas:
  This program uses <a href="https://www.chartjs.org/">Chart.js</a> in order to display an interactive graph with the average world temperatures in Celsius from 1880 to 2020
+
+ The Global Average Temperature in C° displayed as a line graph
+
+![](World-Temperature/images/full-graph.png)
 
 This project involves
 - Loading CSV file
@@ -57,12 +61,8 @@ This project involves
 
 <br/>
 
-The Global Average Temperature in C° displayed as a line graph
 
-
-![](World-Temperature/images/full-graph.png)
-
-The same line graph with the data, along with the console printing the values that were extracted from the .csv file.
+The same line graph as above, along with the console printing the values that were extracted from the .csv file.
 
 ![](World-Temperature/images/line.png)
 
