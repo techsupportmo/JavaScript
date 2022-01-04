@@ -4,7 +4,7 @@
  <br/>
  
  ## Projects
- - [International Space Station (ISS) Map](#international-space-station-iss-map)
+ - [International Space Station (ISS) Map](##international-space-station-iss-map-rocket-round_pushpin)
  - [World Temperature](#World-Temperature-earth_americas)
 
  <br/>
@@ -12,7 +12,7 @@
  
 <br/>
 
-# International Space Station (ISS) Map :rocket: :round_pushpin:
+# International Space Station (ISS) Map  :rocket: :round_pushpin:
 
 This application uses <a href="https://leafletjs.com/">Leaflet.js</a> to display an interactive map with the location of the International Space Station
 
