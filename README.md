@@ -12,7 +12,7 @@
  
 <br/>
 
-# International Space Station (ISS) Map
+# International Space Station (ISS) Map :rocket: :round_pushpin:
 
 This application uses <a href="https://leafletjs.com/">Leaflet.js</a> to display an interactive map with the location of the International Space Station
 
@@ -34,7 +34,7 @@ JSON
 Latitude and Longitude printed on the webpage, as well as the console
 ![](ISS-Map/images/lat_and_lon.png)
 
-After retrieving the latitude and longitude, I used Leaflet.js to create an interactive that would display the ISS as a marker, and I used the setInterval() to make sure that the location would be updated every second
+After retrieving the latitude and longitude, I used Leaflet.js to create an interactive map that would display the ISS as a marker, and I used the setInterval() to make sure that the location would be updated every second
 ![](ISS-Map/images/iss_map.png)
 
 
