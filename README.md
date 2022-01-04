@@ -16,7 +16,7 @@
 
 This application uses <a href="https://leafletjs.com/">Leaflet.js</a> to display an interactive map with the location of the International Space Station
 
-![](ISS-Map/images/iss.gif)
+![](ISS-Map/images/iss2.gif)
 
 In order to create this project, I had to fetch data from a particular endpoint of the <a href="https://wheretheiss.at/w/developer">Where Is The ISS At?</a>  REST API. 
 
@@ -34,6 +34,9 @@ JSON
 Latitude and Longitude printed on the webpage, as well as the console
 ![](ISS-Map/images/lat_and_lon.png)
 
+After retrieving the latitude and longitude, I used Leaflet.js to create an interactive that would display the ISS as a marker, and I used the setInterval() to make sure that the location would be updated every second
+![](ISS-Map/images/iss_map)
+
 
 <br/>
 
@@ -48,7 +51,6 @@ This project involves
     - The dataset was parsed by using JavaScript functions like slice() and split() in order to extract the year and the global annual mean
 - Chart.js
     - This library allowed me to display the dataset using an interactive graph
-    - More info about Chart.js be found <a href="https://www.chartjs.org/">here</a>
 - HTML5 Canvas
 - Modifying chart style
     - Many elements of the chart can be changed, and Chart.js allowed me to specifically customize the graph in terms of the type of graph it is (ie bar graph, line graph, pie graph), background color, border color, and x and y labels.
