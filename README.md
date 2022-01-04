@@ -14,13 +14,12 @@
 
 # International Space Station (ISS) Map
 
-This application uses Leaflet.js to display the location of the International Space Station on a map
+This application uses <a href="https://leafletjs.com/">Leaflet.js</a> to display an interactive map with the location of the International Space Station
 
 ![](ISS-Map/images/iss.gif)
 
 In order to create this project, I had to fetch data from a particular endpoint of the <a href="https://wheretheiss.at/w/developer">Where Is The ISS At?</a>  REST API. 
 
-Add GIF here
 
 This allowed me to access real-time data about the International Space Station, which I converted to JSON format. After that, I destructured the data into two seperate variables, latitude and longitude, and redisplayed it onto the webpage.
 
@@ -39,7 +38,7 @@ Latitude and Longitude printed on the webpage, as well as the console
 <br/>
 
  # World Temperature :earth_americas:
- This program uses Chart.js in order to display an interactive graph with the average world temperatures in Celsius from 1880 to 2020
+ This program uses <a href="https://www.chartjs.org/">Chart.js</a> in order to display an interactive graph with the average world temperatures in Celsius from 1880 to 2020
 
 This project involves
 - Loading CSV file
