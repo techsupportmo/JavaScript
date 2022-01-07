@@ -22,12 +22,27 @@
             // Printing out latitude and longitude
             navigator.geolocation.getCurrentPosition((position) => {
 
+
+                // ---- Printing to Console -----------
                 // Prints out latitude
                 console.log(position.coords.latitude);
                 // Prints out longitude
                 console.log(position.coords.longitude);
                 // Prints out entire object
                 console.log(position);
+                // -------------------------------------
+
+                //Stores Latitude and Longitude and connects them to elements on webpage
+
+                // Latitude
+                const lat = position.coords.latitude;
+                document.getElementById('latitude').textContent = lat;
+
+                // Longitude
+                const lon = position.coords.longitude;
+                document.getElementById('longitude').textContent = lon;
+
+
             });
 
         }
@@ -41,7 +56,12 @@
 
     <h1>Data Selfie App</h1>
 
-    <p>Pretty cool stuff</p>
+    <p>Your Current Location:</p>
+
+    <p>
+        Latitude: <span id="latitude"></span>&deg<br />
+        Longitude: <span id="longitude">&deg</span>
+    </p>
 
 
 
