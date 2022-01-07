@@ -11,21 +11,31 @@
     <!-- JavaScript goes here -->
     <script>
 
-    
-    // This code checks if the geolocation feature
-    // is available on the browser
-    if('geolocation' in navigator) 
-    {
-        /* geolocation is available */
-        console.log("Geolocation is available!");
 
-    }
-    else 
-    {
-        /* geolocation IS NOT available */
-        console.log("Geolocation is unavailable :(");
+        // This code checks if the geolocation feature
+        // is available on the browser
+        if ('geolocation' in navigator) {
+            /* geolocation is available */
+            console.log("Geolocation is available!");
 
-    }
+            // Get Current Position
+            // Printing out latitude and longitude
+            navigator.geolocation.getCurrentPosition((position) => {
+
+                // Prints out latitude
+                console.log(position.coords.latitude);
+                // Prints out longitude
+                console.log(position.coords.longitude);
+                // Prints out entire object
+                console.log(position);
+            });
+
+        }
+        else {
+            /* geolocation IS NOT available */
+            console.log("Geolocation is unavailable :(");
+
+        }
 
     </script>
 
