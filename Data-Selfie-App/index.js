@@ -33,12 +33,17 @@ app.post("/api", (request, response) => {
     // Print out data to the console
     console.log(request.body);
 
+    // Storing the data tha we recieved into an object
+    const data = request.body;
+
     // Send something back as JSON
     response.json({
 
         status: 'success!',
-        latitude: lat
-        longitude: lon,
+        // Sending back latitude
+        latitude: data.lat,
+        // Sending back longitude
+        longitude: data.lon,
 
 
     });
