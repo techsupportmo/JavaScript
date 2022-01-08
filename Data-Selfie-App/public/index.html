@@ -11,6 +11,11 @@
     <!-- JavaScript goes here -->
     <script>
 
+        // ------------------------------------------
+        // CLIENT
+        // index.html
+        // ------------------------------------------
+
 
         // This code checks if the geolocation feature
         // is available on the browser
@@ -42,6 +47,26 @@
                 const lon = position.coords.longitude;
                 document.getElementById('longitude').textContent = lon;
 
+                // Object that stores the latitude and longitude
+                data = { lat, lon };
+                const options = {
+
+                    // Packaging data as a POST
+                    method: 'POST',
+
+                    // Saying that the data being sent is JSON
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+
+                    // We want this data to be sent as JSON
+                    body: JSON.stringify(data)  
+
+
+                }
+
+                // Sending data (latitude & longitude) to endpoint
+                fetch("/api", options);
 
             });
 
