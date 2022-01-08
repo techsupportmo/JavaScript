@@ -13,7 +13,14 @@ app.listen(3000, () => console.log('Listening at 3000'));
 
 // This will allow us to display a static webpage using Express
 // Directory name is 'public'
+// That is the folder with our index.html file
 app.use(express.static('public'));
+
+// This allows the server to understand incoming data as JSON
+// We can put options within the parenthesis
+// Limit allows us to set the maximum size of any body that is coming in
+// The 1 megabyte limit protects us from somebody potentially wanting to flood our server 
+app.use(express.json({ limit: '1mb' }));
 
 // Using Post()
 // Function has two arguments - request & response
@@ -21,6 +28,25 @@ app.use(express.static('public'));
 // Response variable - Lets us send things to the client
 app.post("/api", (request, response) => {
 
+    console.log("I got a request!");
+
+    // Print out data to the console
     console.log(request.body);
+
+    // Send something back as JSON
+    response.json({
+
+        status: 'success!',
+        latitude: lat
+        longitude: lon,
+
+
+    });
+
+    // This is required to end the response
+    // bare minimum
+    // response.end();
+
+
 
 });
