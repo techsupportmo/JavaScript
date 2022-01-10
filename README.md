@@ -18,7 +18,7 @@ Add description here
 
 ![](Data-Selfie-App/images/console.png)
 
-![](ISS-Map/images/browser.png)
+![](Data-Selfie-App/images/browser.png)
 
 
  
