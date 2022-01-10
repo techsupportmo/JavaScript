@@ -16,8 +16,10 @@
 
 Add description here
 
+Server:
 ![](Data-Selfie-App/images/console.png)
 
+Client:
 ![](Data-Selfie-App/images/browser.png)
 
 
