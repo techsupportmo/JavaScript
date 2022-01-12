@@ -16,6 +16,11 @@
 
 Add description here
 
+Tools Used:
+- NodeJS
+- ExpressJS
+
+
 Server:
 ![](Data-Selfie-App/images/console.png)
 
